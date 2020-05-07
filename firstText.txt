@@ -1,4 +1,4 @@
-1、学习使用git
+学习使用git
 ***文本文件不能由记事本直接创建，应使用notepad++创建
 先打开Git Bash, cd到工作区目录下，mkdir创建目录，pwd查看当前所在目录
 初始化一个Git仓库，使用git init命令。
@@ -26,6 +26,18 @@ $ git status //查看工作区状态
 撤销该文件在工作区所有的修改：git checkout -- fileName.xxx
 撤销该文件在暂存区所有的修改，回到最新版本：git reset HEAD <file> //git reset HEAD fileName.xxx
 
-2、页面跳转
-
-3、如何使用vue和其他UI组件
+删除文件（删除未提交文件）！无法恢复文件，回收站找不回，不建议这样删除工作区的文件：
+rm fileName.xxx //删除工作区文件，此时尚未commit提交到master版本控制区
+删除文件（删除提交过的文件）：
+touch testing.txt //创建一个测试文本
+git add testing.txt //添加到暂存区 
+git commit -m "add a new file" //提交到master
+//开始删除
+rm fileName.xxx //如果确实想删除该文件并保留版本后期好恢复的话执行git rm 后git commit提交
+//此时可以撤回删除
+git checkout fileName.xxx //用来恢复rm 掉的文件。
+-----------------------
+git rm testing.txt //从master删除文件
+git commit -m "delete testing file" //删除后要提交才真正在master删除并留下了版本id
+//此时只能回退到版本号了
+git reset --hard 版本号 //git rm 并且提交了之后，就需要使用git reset --hard 版本号来回退了
