@@ -21,7 +21,7 @@ $ git log --pretty=oneline //pretty=oneline参数可以只显示一行日志
 ***要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
 
 $ git status //查看工作区状态
-
+注意：cat firstText.txt 时，查看的是本地的文件，要看提交后的版本可以更新到最新版本或者还原版本。
 2、页面跳转
 
 3、如何使用vue和其他UI组件
