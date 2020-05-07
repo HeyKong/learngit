@@ -22,6 +22,8 @@ $ git log --pretty=oneline //pretty=oneline参数可以只显示一行日志
 
 $ git status //查看工作区状态
 注意：cat firstText.txt 时，查看的是本地的文件，要看提交后的版本可以更新到最新版本或者还原版本。
+撤销该文件在工作区所有的修改：git checkout -- fileName.xxx
+撤销该文件在暂存区所有的修改，回到最新版本：git reset HEAD <file> //git reset HEAD fileName.xxx
 2、页面跳转
 
 3、如何使用vue和其他UI组件
