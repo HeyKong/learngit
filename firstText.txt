@@ -1,8 +1,9 @@
 1、学习使用git
 ***文本文件不能由记事本直接创建，应使用notepad++创建
+先打开Git Bash, cd到工作区目录下，mkdir创建目录，pwd查看当前所在目录
 初始化一个Git仓库，使用git init命令。
 
-添加文件到Git仓库，分两步：
+添加文件到Git仓库，分两步（先添加后提交）：
 	使用命令git add <file>，注意，可反复多次使用，添加多个文件；
 	$ git add file1.txt
 	$ git add file2.txt file3.txt
@@ -24,7 +25,7 @@ $ git status //查看工作区状态
 注意：cat firstText.txt 时，查看的是本地的文件，要看提交后的版本可以更新到最新版本或者还原版本。
 撤销该文件在工作区所有的修改：git checkout -- fileName.xxx
 撤销该文件在暂存区所有的修改，回到最新版本：git reset HEAD <file> //git reset HEAD fileName.xxx
-add a method to undo files in workspace and staging area.
+
 2、页面跳转
 
 3、如何使用vue和其他UI组件
