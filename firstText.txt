@@ -52,6 +52,7 @@ learngit是仓库的名字。
 从远程库克隆：
 gitskills是仓库的名字。
 $ git clone git@github.com:HeyKong/gitskills.git
+$ git push //直接上传本地修改到远程库
 
 创建与合并分支：
 git switch -c dev //创建一个dev分支，并切换到dev分支
